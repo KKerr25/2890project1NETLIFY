@@ -61,18 +61,42 @@
     <section class="testimonials">
       <div class="container">
         <h2 class="section-title">What Our Customers Say</h2>
-        <div class="testimonial-carousel">
-          <div class="testimonial">
-            <p>"Honest business. Safest way to sell a car I have ever experienced."</p>
-            <span>- B. Drake, Billings MT</span>
+        <div class="swiper testimonial-carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide testimonial">
+              <p>"Honest business. Safest way to sell a car I have ever experienced."</p>
+              <span>- B. Drake, Billings MT</span>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <small>May 2025</small>
+            </div>
+            <div class="swiper-slide testimonial">
+              <p>"Great experience. Professional, honest, and fair pricing!"</p>
+              <span>- M. Hubbard, Phoenix AZ</span>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <small>April 2025</small>
+            </div>
           </div>
-          <div class="testimonial">
-            <p>"Great experience. Professional, honest, and fair pricing!"</p>
-            <span>- M. Hubbard, Phoenix AZ</span>
-          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper(".testimonial-carousel", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 4000,
+        },
+      })
+    </script>
 
     <section class="recent-purchases">
       <div class="container">
