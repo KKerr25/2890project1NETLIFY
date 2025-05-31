@@ -1,0 +1,228 @@
+// Author: Konrad Kerr
+// Date: 5/29/2025
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+$primary-color: #ff6b00;
+$secondary-color: rgb(108, 117, 125);
+$text-color: #ffffff;
+$light-gray: #f8f9fa;
+$border-radius: 10px;
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background: rgb(108, 117, 125);
+
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 120px;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+
+    li {
+      a {
+        color: $text-color;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: #ff6b00;
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+    color: #686868;
+    font-size: 24px;
+
+    &:hover {
+      color: #ff6b00;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hero {
+  @extend .container-fluid, .py-5, .d-flex, .align-items-center, .justify-content-between;
+  background-color: rgb(108, 117, 125);
+  color: $text-color;
+
+  .highlight {
+    color: $primary-color;
+  }
+
+  .offer-form {
+    @extend .bg-dark, .p-3, .rounded;
+    opacity: 0.8;
+
+    input,
+    select {
+      @extend .form-control, .my-2;
+    }
+
+    .btn {
+      @extend .btn, .btn-warning, .w-100;
+    }
+  }
+}
+
+.how-it-works {
+  @extend .container-fluid, .py-5, .bg-light;
+}
+
+.steps {
+  @extend .row;
+  .step {
+    @extend .col-md-6, .col-lg-4, .p-3, .bg-white, .rounded, .shadow-sm, .text-center;
+    font-weight: bold;
+  }
+}
+
+.testimonials {
+  @extend .container-fluid, .py-5, .bg-secondary;
+  h2 {
+    color: white !important;
+  }
+
+  .testimonial-carousel {
+    @extend .d-flex, .overflow-auto;
+    scroll-snap-type: x mandatory;
+
+    .testimonial {
+      @extend .px-4, .py-3, .rounded, .shadow-sm;
+      background: rgba(255, 255, 255, 0.1);
+      font-style: italic;
+      scroll-snap-align: start;
+      min-width: 300px;
+      color: white;
+    }
+  }
+}
+
+.recent-purchases {
+  @extend .container-fluid, .py-5;
+
+  .purchase-list {
+    @extend .row, .justify-content-center;
+
+    .purchase-card {
+      @extend .col-md-6,
+        .col-lg-4,
+        .p-3,
+        .bg-white,
+        .rounded,
+        .shadow-sm,
+        .text-center,
+        .transition-transform !optional;
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      img {
+        @extend .img-fluid;
+        max-width: 100%;
+      }
+
+      h3 {
+        @extend .fs-5, .fw-bold;
+        color: $secondary-color;
+      }
+
+      .miles {
+        color: darken($light-gray, 30%);
+      }
+
+      .price {
+        color: $primary-color;
+        font-weight: bold;
+      }
+
+      .btn {
+        @extend .btn, .btn-warning, .w-100, .mt-2;
+      }
+    }
+  }
+}
+
+.footer {
+  @extend .container-fluid, .py-4, .bg-secondary, .text-center, .text-white;
+
+  .footer-logo {
+    @extend .mb-3;
+    width: 120px;
+  }
+
+  a {
+    @extend .text-warning, .fw-bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .navbar {
+    flex-direction: row;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .testimonial-carousel {
+    overflow-x: hidden;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .testimonial-carousel {
+    overflow-x: auto;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .purchase-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
