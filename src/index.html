@@ -44,35 +44,57 @@
       </form>
     </section>
 
-    <section class="how-it-works">
-      <div class="container">
-        <h2 class="section-title">How It Works</h2>
-        <div class="steps">
-          <div class="step">1. Fill out the online form with accurate car details.</div>
-          <div class="step">2. Get an instant offer valid for 7 days.</div>
-          <div class="step">3. Provide access to your car at a Cardeal location.</div>
-          <div class="step">4. Provide proof of ownership with a valid title.</div>
-          <div class="step">5. Cardeal inspects your car to verify its condition.</div>
-          <div class="step">6. Accept the offer and receive payment or apply for a trade-in.</div>
+    <section class="testimonials">
+      <div class="">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="swiper testimonial-carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide testimonial">
+              <p>"Honest business. Safest way to sell a car I have ever experienced."</p>
+              <span>- B. Drake, Billings MT</span>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <small>May 2025</small>
+            </div>
+            <div class="swiper-slide testimonial">
+              <p>"Great experience. Professional, honest, and fair pricing!"</p>
+              <span>- M. Hubbard, Phoenix AZ</span>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <small>April 2025</small>
+            </div>
+            <div class="swiper-slide testimonial">
+              <p>"Cant beat their out the door pricing!"</p>
+              <span>- M. Hubbard, Phoenix AZ</span>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <small>March 2025</small>
+            </div>
+            <div class="swiper-slide testimonial">
+              <p>"Very Professional! Best around!</p>
+              <span>- M. Hubbard, Phoenix AZ</span>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+              <small>Feburary 2025</small>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>
 
-    <section class="testimonials">
-      <div class="container">
-        <h2 class="section-title">What Our Customers Say</h2>
-        <div class="testimonial-carousel">
-          <div class="testimonial">
-            <p>"Honest business. Safest way to sell a car I have ever experienced."</p>
-            <span>- B. Drake, Billings MT</span>
-          </div>
-          <div class="testimonial">
-            <p>"Great experience. Professional, honest, and fair pricing!"</p>
-            <span>- M. Hubbard, Phoenix AZ</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper(".testimonial-carousel", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 4000,
+        },
+      })
+    </script>
 
     <section class="recent-purchases">
       <div class="container">

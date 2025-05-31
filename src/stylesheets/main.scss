@@ -107,17 +107,16 @@ body {
 }
 
 .testimonials {
-  @extend .container-fluid, .py-5, .bg-secondary;
-  h2 {
-    color: white !important;
-  }
+  background-color: white;
+  @extend .container-fluid, .py-5;
 
   .testimonial-carousel {
     @extend .d-flex, .overflow-auto;
     scroll-snap-type: x mandatory;
+    background-color: white;
 
     .testimonial {
-      @extend .px-4, .py-3, .rounded, .shadow-sm;
+      @extend .px-4, .py-3, .rounded, .shadow-sm, .bg-secondary;
       background: rgba(255, 255, 255, 0.1);
       font-style: italic;
       scroll-snap-align: start;
