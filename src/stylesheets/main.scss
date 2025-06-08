@@ -1,5 +1,5 @@
 // Author: Konrad Kerr
-// Date: 5/29/2025
+// Date: 6/8/2025
 
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
@@ -144,7 +144,6 @@ body {
       min-height: 50px;
     }
 
-    /* Optional text styling */
     p,
     span {
       font-size: 1rem;
@@ -154,7 +153,6 @@ body {
   }
 }
 
-/* Responsive: On very small screens, use one column */
 @media (max-width: 500px) {
   .how-it-works .steps {
     grid-template-columns: 1fr;
@@ -222,7 +220,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Space between the two sections */
+    gap: 30px;
   }
 
   .offer-section,
@@ -275,7 +273,7 @@ body {
   .testimonial-carousel {
     position: relative;
     width: 100%;
-    max-width: 900px; // Limit overall width for the slider
+    max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
     box-sizing: border-box;
@@ -287,7 +285,7 @@ body {
 
     .swiper-slide {
       box-sizing: border-box;
-      padding: 20px; // Internal spacing for slide content
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -324,7 +322,6 @@ body {
       }
     }
 
-    /* Navigation Buttons */
     .swiper-button-next,
     .swiper-button-prev {
       position: absolute;
@@ -340,7 +337,7 @@ body {
       justify-content: center;
       cursor: pointer;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      transition: background 0.3s, transform 0.3s;
+      transition: 0.3s, transform 0.3s;
       z-index: 10;
     }
     .swiper-button-prev {
@@ -357,7 +354,6 @@ body {
   }
 }
 
-/* Media Queries for smaller screens */
 @media (max-width: 768px) {
   .testimonial-carousel {
     max-width: 100%;
@@ -375,7 +371,7 @@ body {
 }
 
 .faqs {
-  background: #fff; /* White background for a clean look */
+  background: #fff;
   padding: 60px 15px;
 
   .container {
@@ -394,7 +390,7 @@ body {
   }
 
   .faq-item {
-    background: #f5f5f5; /* Light grey card background for contrast */
+    background: #f5f5f5;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px 25px;
@@ -423,7 +419,6 @@ body {
   }
 }
 
-/* Optional Responsive Adjustments */
 @media (max-width: 600px) {
   .faqs .section-title {
     font-size: 1.75rem;
