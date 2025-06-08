@@ -15,11 +15,21 @@
       <nav class="navbar">
         <img src="images/logo.svg" alt="Cardeal Logo" class="logo" />
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">How It Works</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">FAQs</a></li>
+          <li>
+            <a href="#"><i class="bi bi-house-fill"></i> Home</a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-gear-fill"></i> How It Works</a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-people-fill"></i> About Us</a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-chat-quote-fill"></i> Testimonials</a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-question-circle-fill"></i> FAQs</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -42,6 +52,53 @@
         </select>
         <button type="submit" class="btn">Get an Offer</button>
       </form>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <i class="bi bi-pencil-square"></i>
+            1. Fill out the online form with accurate car details.
+          </div>
+          <div class="step">
+            <i class="bi bi-currency-dollar"></i>
+            2. Get an instant offer valid for 7 days.
+          </div>
+          <div class="step">
+            <i class="bi bi-geo-alt"></i>
+            3. Provide access to your car at a Cardeal location.
+          </div>
+          <div class="step">
+            <i class="bi bi-file-earmark-check"></i>
+            4. Provide proof of ownership with a valid title.
+          </div>
+          <div class="step">
+            <i class="bi bi-wrench"></i>
+            5. Cardeal inspects your car to verify its condition.
+          </div>
+          <div class="step">
+            <i class="bi bi-hand-thumbs-up"></i>
+            6. Accept the offer and receive payment or apply for a trade-in.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages">
+      <h2>The Advantages of Selling Your Car to Cardeal</h2>
+      <p>Cardeal offers a better way for you to sell or trade in your car. Here’s why people choose us.</p>
+      <ul>
+        <li>Competitive offers—get more for your car than a standard dealer trade-in.</li>
+        <li>We take “less-than-perfect” cars with body damage or mechanical issues.</li>
+        <li>No purchase required—you don’t have to buy a car from us.</li>
+        <li>Avoid scams—our process is fast, easy, and secure.</li>
+        <li>Our professional team has earned an A+ BBB rating and thousands of positive reviews.</li>
+        <li>All makes and models driven on American roads are welcome.</li>
+        <li>Locations in all 50 states—deliver your car or let us pick it up.</li>
+        <li>We care! Over **1M meals donated** to Feeding America and Meals on Wheels.</li>
+      </ul>
     </section>
 
     <section class="testimonials">
@@ -86,32 +143,132 @@
     <script>
       const swiper = new Swiper(".testimonial-carousel", {
         loop: true,
+        speed: 800,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-        autoplay: {
-          delay: 4000,
-        },
       })
     </script>
+
+    <section class="faqs">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <h3>
+            <i class="bi bi-shield-check"></i>
+            How is Cardeal different from other online car buyers?
+          </h3>
+          <p>
+            Cardeal will buy "any" car—even if it has a blown engine. We offer the highest value, quick payment,
+            convenience, and a secure transaction. If you sell your car to us, you aren’t obligated to buy your next
+            one, though our great deals speak for themselves.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            <i class="bi bi-currency-dollar"></i>
+            How is the price of my car calculated?
+          </h3>
+          <p>Prices are calculated based on the current market value of your car and its condition.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            <i class="bi bi-receipt"></i>
+            What costs will I be responsible for?
+          </h3>
+          <p>
+            Cardeal is a free service. There are no charges for evaluations and offers. When you sell a car with
+            Cardeal, we cover pick up and towing—no hidden costs.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            <i class="bi bi-truck"></i>
+            How quickly can you have my vehicle picked up?
+          </h3>
+          <p>
+            With branches in every state, we can usually pick up your vehicle within 24 to 48 hours after you accept our
+            offer.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            <i class="bi bi-card-checklist"></i>
+            What type of documentation will I need to provide?
+          </h3>
+          <p>
+            When filling out our online form, you'll be asked to provide your Vehicle Identification Number (VIN), which
+            includes details about the year, make, model, trim, and more. A valid, signed title in the seller’s name is
+            also required.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            <i class="bi bi-lightning-charge-fill"></i>
+            Will you buy my car if I can't get it started?
+          </h3>
+          <p>
+            If your car is damaged, wrecked, or non-running, we can still provide a fair market offer tailored to your
+            vehicle’s condition and local market demand.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <section class="recent-purchases">
       <div class="container">
         <h2 class="section-title">Recent Purchases</h2>
         <div class="purchase-list">
-          <div class="purchase-card">
+          <div class="col-md-6 purchase-card">
             <img src="images/toyota_4runner.png" alt="Toyota 4-Runner" />
             <h3>Toyota 4-Runner (2001)</h3>
             <p><span class="miles">179,000 miles</span> - <span class="price">$6,500</span></p>
             <button class="btn">View Details</button>
           </div>
-          <div class="purchase-card">
+          <div class="col-md-6 purchase-card">
             <img src="images/ford_fusion.png" alt="Ford Fusion" />
             <h3>Ford Fusion (2010)</h3>
             <p><span class="miles">59,000 miles</span> - <span class="price">$8,919</span></p>
             <button class="btn">View Details</button>
           </div>
+          <div class="col-md-6 purchase-card">
+            <img src="images/hyundai_elantra.png" alt="Ford Fusion" />
+            <h3>Hyundia Elantra (2007)</h3>
+            <p><span class="miles">82,000 miles</span> - <span class="price">$8,450</span></p>
+            <button class="btn">View Details</button>
+          </div>
+          <div class="col-md-6 purchase-card">
+            <img src="images/honda_civic_sedan.png" alt="Ford Fusion" />
+            <h3>Honda Civic (2009)</h3>
+            <p><span class="miles">72,000 miles</span> - <span class="price">$9,000</span></p>
+            <button class="btn">View Details</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-section">
+      <div class="container">
+        <div class="offer-section">
+          <h2><i class="bi bi-cash-stack"></i> Get Your Offer</h2>
+          <p>At Cardeal, we offer quick, fair, and hassle‐free evaluations so you can move on to what matters most.</p>
+        </div>
+        <div class="sales-section">
+          <h2><i class="bi bi-graph-up"></i> Recent Sales</h2>
+          <p>Discover how our customers benefit from smooth, transparent deals every day.</p>
         </div>
       </div>
     </section>
